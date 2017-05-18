@@ -22,3 +22,11 @@ class MyProduct(models.Model):
         self.price = scraper.getPrice()
         self.imagePath = scraper.getImageUrl()
 
+
+    def updateProducts(self):
+        products = self.env['scraper.product'].search([])
+        for product in products:
+            temp = self.env['scraper.product'].browse([product.id])
+            scraper = Scrapper(temp.link)
+            temp.write({"name": scraper.getName(), "description": scraper.getDescription(),
+                        "price": scraper.getPrice(), 'imagePath': scraper.getImageUrl()})

@@ -15,7 +15,7 @@ class Scrapper:
     def getPrice(self):
         price = self.soup.find("div", {"class": "text-default price-container"})
         price_value = price.find("h3").text
-        return price_value.replace("EGP", "")
+        return price_value.replace("EGP", "").replace(",","")
 
     def getDescription(self):
         description = self.soup.find("div", {"class": "item-details-mini"})

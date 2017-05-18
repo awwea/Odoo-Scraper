@@ -8,7 +8,7 @@
                 <tree>
                     <field name="name"/>
                     <field name="url"/>
-                    <button name="update_product" type="object" class="oe_highlight" string="update" icon="fa-download">
+                    <button name="getData" type="object" class="oe_highlight" string="update" icon="fa-download">
                     </button>
                 </tree>
             </field>

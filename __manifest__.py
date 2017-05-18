@@ -14,6 +14,7 @@
 
     # always loaded
     'data': [
-        'views/product.xml'
+        'views/product.xml',
+        'util/corn.xml'
     ]
 }
