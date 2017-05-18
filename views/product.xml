@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+
+        <record id="products_tree_view" model="ir.ui.view">
+            <field name="name">product</field>
+            <field name="model">scraper.product</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="url"/>
+                </tree>
+            </field>
+        </record>
+        <record id="trainee_form_view" model="ir.ui.view">
+            <field name="name">product</field>
+            <field name="model">scraper.product</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="url"/>
+                            <field name="category"/>
+                            <field name="title"/>
+                            <field name="price"/>
+                            <field name="description"/>
+                            <field name="image"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="products_action" model="ir.actions.act_window">
+            <field name="name">Product</field>
+            <field name="res_model">scraper.product</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="scraper" name="Scraper"/>
+        <menuitem id="products" name="Products" parent="scraper" action="products_action"/>
+
+    </data>
+</odoo>
